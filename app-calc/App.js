@@ -5,6 +5,8 @@ import { MaterialIcons, FontAwesome } from '@expo/vector-icons';
 // importação das telas
 import HomeScreen from './src/pages/HomeScreen';
 import CalcScreen from './src/pages/CalcScreen';
+import HelpScreen from './src/pages/HelpScreen';
+import AboutScreen from './src/pages/AboutScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -37,6 +39,24 @@ export default function App() {
           options={{
             tabBarIcon: ({ size, color }) => (
               <FontAwesome name='user' size={size} color={color} />
+            )
+          }}
+        />
+        <Tab.Screen 
+          name="Help" 
+          component={HelpScreen}
+          options={{
+            tabBarIcon: ({ size, color }) => (
+              <FontAwesome name='info-circle' size={size} color={color} />
+            )
+          }}
+        />
+        <Tab.Screen 
+          name="About" 
+          component={AboutScreen}
+          options={{
+            tabBarIcon: ({ size, color }) => (
+              <FontAwesome name='handshake-o' size={size} color={color} />
             )
           }}
         />
