@@ -6,9 +6,9 @@ Este é um aplicativo utilizando React Native e React Navigation para navegaçã
 
 - Navegação por abas com quatro telas principais:
   - **Home**: Tela inicial do aplicativo.
-  - **Settings**: Tela de configurações.
-  - **Profile**: Tela de perfil do usuário.
-  - **About**: Tela com informações sobre o aplicativo.
+  - **Calc**: Tela de cálculo do IMC.
+  - **Help**: Tela de ajuda com meios de contato.
+  - **About**: Tela com informações sobre o aplicativo e o desenvolvedor.
 
 ## Tecnologias Utilizadas
 
