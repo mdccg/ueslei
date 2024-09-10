@@ -1,22 +1,40 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
-    <View>
+    <View style={homeStyles.container}>
       <Text>App de Utilitarios</Text>
 
-      <TouchableOpacity 
-        onPress={() => navigation.navigate('Calc')}
-      >
+      <TouchableOpacity style={homeStyles.botao} onPress={() => navigation.navigate('Calc')}>
         <Text>Calculadora</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity 
-        onPress={() => navigation.navigate('IMC')}
-      >
-        <Text>Calcular IMC</Text>
+      <TouchableOpacity style={homeStyles.botao} onPress={() => navigation.navigate('Help')}>
+        <Text>Ajuda</Text>
       </TouchableOpacity>
-
+      
+      <TouchableOpacity style={homeStyles.botao} onPress={() => navigation.navigate('About')}>
+        <Text>Conheça a equipe</Text>
+      </TouchableOpacity>
     </View>
   )
 }
+
+export const homeStyles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+  },
+
+  botao: {
+    backgroundColor: 'lightblue',
+
+    width: 256,
+    height: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+    marginTop: 10,
+  },
+});

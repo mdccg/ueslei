@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
+import { homeStyles } from '../HomeScreen/index`';
 
 export default function CalcScreen() {
   const [number, setNumber] = React.useState(0);
@@ -41,28 +42,28 @@ export default function CalcScreen() {
   }
 
   return (
-    <View>
-      <Text>CalcScreen</Text>
+    <View style={styles.container}>
+      <Text>Calculadora</Text>
 
       <Text>Informe o primeiro numero</Text>
-      <TextInput onChangeText={(v) => setNumber(v)} inputMode="numeric" />
+      <TextInput style={styles.input} onChangeText={(v) => setNumber(v)} inputMode="numeric" />
 
       <Text>Informe o segundo numero</Text>
-      <TextInput onChangeText={(v) => setNumber2(v)} inputMode="numeric" />
+      <TextInput style={styles.input} onChangeText={(v) => setNumber2(v)} inputMode="numeric" />
 
-      <TouchableOpacity onPress={somar}>
+      <TouchableOpacity style={homeStyles.botao} onPress={somar}>
         <Text>Somar</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={subtrair}>
+      <TouchableOpacity style={homeStyles.botao} onPress={subtrair}>
         <Text>Subtrair</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={multiplicar}>
+      <TouchableOpacity style={homeStyles.botao} onPress={multiplicar}>
         <Text>Multiplicar</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={dividir}>
+      <TouchableOpacity style={homeStyles.botao} onPress={dividir}>
         <Text>Dividir</Text>
       </TouchableOpacity>
 
@@ -70,3 +71,19 @@ export default function CalcScreen() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+  },
+
+  input: {
+    borderWidth: 1,
+    borderColor: 'gray',
+    width: '80%',
+    marginBottom: 10,
+    borderRadius: 2,
+  },
+});

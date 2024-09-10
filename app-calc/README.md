@@ -6,7 +6,7 @@ Este é um aplicativo utilizando React Native e React Navigation para navegaçã
 
 - Navegação por abas com quatro telas principais:
   - **Home**: Tela inicial do aplicativo.
-  - **Calc**: Tela de cálculo do IMC.
+  - **Calc**: Tela de cálculo com os quatro operadores aritméticos.
   - **Help**: Tela de ajuda com meios de contato.
   - **About**: Tela com informações sobre o aplicativo e o desenvolvedor.
 
